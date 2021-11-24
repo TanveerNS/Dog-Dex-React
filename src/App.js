@@ -86,20 +86,21 @@ export class DogPhotoDisplay extends Component {
         <div className="container">
           <div className="selectionPanel">
             <p>Select a Dog Breed</p>
-
-            <Select
-              options={breeds}
-              onChange={this.handleBreedSelection}
-              className="dropdown"
-            />
-
+            <div className="dog-container">
+              <Select
+                options={breeds}
+                onChange={this.handleBreedSelection}
+                className="dropdown"
+              />
+              
+            </div>
             <button onClick={this.handleClick()} className="button">
-              Click here for next{" "}
-              {selectedBreed.value ? selectedBreed.value : "dog"}{" "}
-              <span role="img" aria-label="dog-emoji">
-               🐕
-              </span>
-            </button>
+                Click here for next{" "}
+                {selectedBreed.value ? selectedBreed.value : "dog"}{" "}
+                <span role="img" aria-label="dog-emoji">
+                  🐕
+                </span>
+              </button>
           </div>
           <div className="dog-image">
             {imgUrl && <img src={imgUrl} alt={`a ${getBreed(imgUrl)}`} />}
