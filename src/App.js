@@ -97,7 +97,7 @@ export class DogPhotoDisplay extends Component {
               Click here for next{" "}
               {selectedBreed.value ? selectedBreed.value : "dog"}{" "}
               <span role="img" aria-label="dog-emoji">
-                🐶
+               🐕
               </span>
             </button>
           </div>
